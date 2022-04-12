@@ -1,0 +1,239 @@
+h1 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+}
+
+body {
+    background: url(/casinobackground.jpg);
+    background-position: center;
+
+}
+
+.table {
+    height: 80vh;
+    width: 130vh;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    border: 10px rgb(77, 68, 43) solid;
+    border-radius: 130px;
+    
+}
+.tableIMG {
+    align-self: center;
+    width: 100%;
+    
+  
+}
+.deck {
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    right: 10%;
+    top: 32%;
+   
+}
+
+#hitBTN {
+    background-color: green;
+    position: absolute;
+    top: 45%;
+    left: 23%;
+    height: 15%;
+    width: 10%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    border: black solid 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#stayBTN {
+    background-color: red;
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    height: 15%;
+    width: 10%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    border: black solid 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#restartBTN {
+    background-color: orange;
+    position: absolute;
+    height: 10%;
+    width: 15%;
+    left: -15%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    border: orange solid 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.restartAnimation {
+    animation-name: restartBtn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes restartBtn {
+    25% {
+        left: 50%;
+        top: 40%;
+        background-color: orange;
+    }
+    50% {
+        
+       left: 50%;
+       top: 40%;
+       background-color: orangered;
+
+    }
+
+    100% {
+        left: 50%;
+        top: 40%;
+        background-color: red;
+    }
+}
+
+.cardPositioningP1 {
+  position: relative;
+  height: 150px;
+  width: 70px;
+}
+
+.cardPositioningDealer {
+    position: relative;
+    height: 150px;
+    width: 70px;
+  }
+
+.playerOne_hands {
+    border: black solid 2px;
+    width: 60%;
+    height: 13%;
+    top: 80%;
+    right: 3%;
+    position: absolute;
+}
+
+.dealer_hands {
+    border: black solid 2px;
+    width: 60%;
+    height: 13%;
+    right: 3%;
+    position: absolute;
+}
+
+.cardCount {
+    position: absolute;
+    left: 40%;
+    top: 70%;
+    font-size: 30px;
+}
+
+.result {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    font-size: 40px;
+}
+
+.aceOptionBtn {
+    background-color: red;
+    position: relative;
+    height: 50%;
+    width: 15%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    border: black solid 5px;
+    border-radius: 20px;
+}
+
+.aceOptionBtn11 {
+    background-color: red;
+    position: relative;
+    height: 50%;
+    width: 15%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    border: black solid 5px;
+    border-radius: 20px;
+}
+
+.dealerCardCount {
+    position: absolute;
+    left: 60%;
+    top: 15%;
+    font-size: 30px;
+}
+
+.buttonVisibility {
+    visibility: hidden;
+}
+
+#playBtn {
+    
+    height: 5%;
+    width: 15%;
+    font-size: medium;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .table {
+        max-width: 70%;
+        border: none;
+    }
+
+    #restartBTN {
+    
+        height: 5%;
+        width: 15%;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    #stayBTN {
+        height: 5%;
+        width: 10%;
+        font-size: small;
+        border: 3px dotted black;
+    }
+
+    #hitBTN {
+        height: 5%;
+        width: 10%;
+        font-size: small;
+        border: 3px dotted black;
+        }
+
+    body {
+        background: url(/casinobackground.jpg);
+        background-position:left;
+         
+        }
+        .playerOne_hands {
+            border: none;
+            width: 70%;
+            height: 13%;
+            
+        }
+        
+        .dealer_hands {
+            border: none;
+            width: 70%;
+            height: 13%;
+        }
+        
+
+
+}
