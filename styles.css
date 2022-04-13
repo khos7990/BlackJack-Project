@@ -12,11 +12,10 @@ body {
 
 .table {
     height: 80vh;
-    width: 130vh;
+    width: 70vw;
     margin: 0 auto;
     display: flex;
     position: relative;
-    border: 10px rgb(77, 68, 43) solid;
     border-radius: 130px;
     
 }
@@ -75,6 +74,22 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+.startButton {
+background-color: yellow;
+position: absolute;
+height: 10%;
+width: 15%;
+left: 45%;
+top: 45%;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: xx-large;
+border: orange solid 5px;
+border-radius: 10px;
+cursor: pointer;
+animation-name: startBTN;
+animation-duration: 5s;
+animation-fill-mode: both;
+}
 
 .restartAnimation {
     animation-name: restartBtn;
@@ -99,6 +114,24 @@ body {
     100% {
         left: 50%;
         top: 40%;
+        background-color: red;
+    }
+}
+
+@keyframes startBTN {
+    25% {
+        
+        background-color: orange;
+    }
+    50% {
+        
+       
+       background-color: orangered;
+
+    }
+
+    100% {
+      
         background-color: red;
     }
 }
@@ -233,7 +266,14 @@ body {
             width: 70%;
             height: 13%;
         }
-        
+
+        .deck {
+            position: absolute;
+            height: 50px;
+            width: 30px;
+            top: 47%;
+           
+        }
 
 
 }
