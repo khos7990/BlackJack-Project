@@ -12,11 +12,10 @@ body {
 
 .table {
     height: 80vh;
-    width: 130vh;
+    width: 70vw;
     margin: 0 auto;
     display: flex;
     position: relative;
-    border: 10px rgb(77, 68, 43) solid;
     border-radius: 130px;
     
 }
@@ -75,6 +74,22 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+.startButton {
+background-color: yellow;
+position: absolute;
+height: 10%;
+width: 15%;
+left: 45%;
+top: 45%;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: xx-large;
+border: orange solid 5px;
+border-radius: 10px;
+cursor: pointer;
+animation-name: startBTN;
+animation-duration: 5s;
+animation-fill-mode: both;
+}
 
 .restartAnimation {
     animation-name: restartBtn;
@@ -103,6 +118,24 @@ body {
     }
 }
 
+@keyframes startBTN {
+    25% {
+        
+        background-color: orange;
+    }
+    50% {
+        
+       
+       background-color: orangered;
+
+    }
+
+    100% {
+      
+        background-color: red;
+    }
+}
+
 .cardPositioningP1 {
   position: relative;
   height: 150px;
@@ -116,7 +149,6 @@ body {
   }
 
 .playerOne_hands {
-    border: black solid 2px;
     width: 60%;
     height: 13%;
     top: 80%;
@@ -125,7 +157,6 @@ body {
 }
 
 .dealer_hands {
-    border: black solid 2px;
     width: 60%;
     height: 13%;
     right: 3%;
@@ -187,7 +218,7 @@ body {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 800px) {
     
     .table {
         max-width: 70%;
@@ -197,23 +228,24 @@ body {
     #restartBTN {
     
         height: 5%;
-        width: 15%;
-        font-size: medium;
-        font-weight: bold;
+        width: 22%;
+        font-size: small;
+        
     }
 
     #stayBTN {
         height: 5%;
-        width: 10%;
-        font-size: small;
-        border: 3px dotted black;
+        width: 15%;
+        font-size: x-small;
+        border: none;
     }
 
     #hitBTN {
         height: 5%;
-        width: 10%;
-        font-size: small;
-        border: 3px dotted black;
+        width: 20%;
+        left: 30%;
+        font-size: x-small;
+        border: none;
         }
 
     body {
@@ -224,8 +256,7 @@ body {
         .playerOne_hands {
             border: none;
             width: 70%;
-            height: 13%;
-            
+            height: 13%;            
         }
         
         .dealer_hands {
@@ -233,7 +264,32 @@ body {
             width: 70%;
             height: 13%;
         }
-        
 
+        .deck {
+            position: absolute;
+            height: 50px;
+            width: 30px;
+            top: 47%;
+           
+        }
 
+        .startButton {
+            top: 47%;
+            width: 19%;
+            height: 5%;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: small;
+            border: orange solid 2px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .cardCount, .dealerCardCount {
+            font-size: medium;
+        }
+
+    .aceOptionBtn, .aceOptionBtn11 {
+        font-size: medium;
+        border: none;
+    }
 }
