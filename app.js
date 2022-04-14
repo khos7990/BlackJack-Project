@@ -10,7 +10,6 @@ const dealerCardCountEl = document.querySelector(".dealerCardCount");
 const resultEl = document.querySelector(".result");
 const tableEl = document.querySelector(".table");
 //Card Combinations
-//joker?
 const cardSymbols = ["h", "s", "d", "c"];
 const cardValues = [
   "02",
@@ -27,6 +26,7 @@ const cardValues = [
   "K",
   "A",
 ];
+//Variable Declarations
 let randomPlayerCombination;
 let randomPlayerValue;
 let randomPlayerSymbol;
@@ -56,6 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
   tableEl.append(startButton);
   startButton.addEventListener("click", gameInitiation);
 });
+
+function restartAnimation() {
+  hitBtnEl.classList.add("buttonVisibility");
+  stayBtnEl.classList.add("buttonVisibility");
+  restartBtnEl.classList.remove("buttonVisibility");
+  restartBtnEl.classList.add("restartAnimation");
+}
 
 function randomPlayerCard() {
   randomPlayerSymbol =
@@ -224,7 +231,6 @@ function gameInitiation() {
     card.classList.add("small");
   }
   playerCardHolder.append(card);
-  console.log(card);
   playerCount();
   setTimeout(function () {
     let card2 = document.createElement("div");
@@ -242,7 +248,6 @@ function gameInitiation() {
       card2.classList.add("small");
     }
     playerCardHolder.append(card2);
-    console.log(card2);
     playerCount();
     stayBtnEl.classList.remove("buttonVisibility");
     hitBtnEl.classList.remove("buttonVisibility");
@@ -276,13 +281,5 @@ restartBtnEl.addEventListener("click", function () {
   gameDone();
   gameInitiation();
   restartBtnEl.classList.add("buttonVisibility");
+  restartBtnEl.classList.remove("restartAnimation");
 });
-
-// restartBtnEl.classList.remove('restartAnimation');
-
-function restartAnimation() {
-  hitBtnEl.classList.add("buttonVisibility");
-  stayBtnEl.classList.add("buttonVisibility");
-  restartBtnEl.classList.remove("buttonVisibility");
-  restartBtnEl.classList.add("restartAnimation");
-}

@@ -91,7 +91,7 @@ body {
 .restartAnimation {
   animation-name: restartBtn;
   animation-duration: 2s;
-  animation-direction: forward;
+  animation-fill-mode: forwards;
 }
 
 @keyframes restartBtn {
